@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message to Melissa</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text_container">
+            <h1 class="header_text">Hola Hermosa ... Mi Corazon</h1>
+            <h2>There's a couple of things I want to say to you, especially after our date today.</h2>
+            <h2>Do you want to find out what I have to say?</h2>
+            <h3>Also Good Night! I hope you have a fun time with Jade tomorrow baby.<h3>
+        </div>
+        <div class="gif_container">
+            <img src="gifs/venom-question.webp" alt="venom asking a question">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+          <!-- <button class="btn" id="noButton" onmouseover="shrinkButton()" onclick="shrinkButton()">No</button> -->
+        </div>
+    </div>
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html";
+        }
+       
+        function shrinkButton() {
+            var noButton = document.getElementById('noButton');
+            var currentWidth = noButton.offsetWidth;
+            var currentHeight = noButton.offsetHeight;
+            noButton.style.width = currentWidth * 0.9 + 'px';
+            noButton.style.height = currentHeight * 0.9 + 'px';
+            noButton.style.fontSize = parseInt(window.getComputedStyle(noButton).fontSize) * 0.9 + 'px';
+            noButton.style.padding = parseInt(window.getComputedStyle(noButton).paddingTop) * 0.9 + 'px ' +
+                                     parseInt(window.getComputedStyle(noButton).paddingRight) * 0.9 + 'px';
+        }
+   
+    </script>
+</body>
+</html>
